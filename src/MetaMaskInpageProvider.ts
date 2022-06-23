@@ -79,7 +79,7 @@ export class MetaMaskInpageProvider extends AbstractStreamProvider {
   /**
    * Indicating that this provider is a MetaMask provider.
    */
-  public readonly isMetaMask: true;
+  public readonly isMadWallet: true;
 
   /**
    * @param connectionStream - A Node.js duplex stream
@@ -114,7 +114,7 @@ export class MetaMaskInpageProvider extends AbstractStreamProvider {
     this._initializeStateAsync();
 
     this.networkVersion = null;
-    this.isMetaMask = true;
+    this.isMadWallet = true;
 
     this._sendSync = this._sendSync.bind(this);
     this.enable = this.enable.bind(this);
