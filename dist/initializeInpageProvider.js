@@ -42,7 +42,7 @@ exports.initializeProvider = initializeProvider;
  * @param providerInstance - The provider instance.
  */
 function setGlobalProvider(providerInstance) {
-    window.ethereum = providerInstance;
+    window.madwallet = providerInstance;
     window.dispatchEvent(new Event('ethereum#initialized'));
 }
 exports.setGlobalProvider = setGlobalProvider;
