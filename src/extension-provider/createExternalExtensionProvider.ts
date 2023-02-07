@@ -29,7 +29,7 @@ export function createExternalExtensionProvider() {
     // constructor.
     provider.initialize();
   } catch (error) {
-    console.dir(`MetaMask connect error.`, error);
+    console.dir(`MadWallet connect error.`, error);
     throw error;
   }
   return provider;

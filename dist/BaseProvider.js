@@ -240,12 +240,12 @@ class BaseProvider extends safe_event_emitter_1.default {
     _handleAccountsChanged(accounts, isEthAccounts = false) {
         let _accounts = accounts;
         if (!Array.isArray(accounts)) {
-            this._log.error('MetaMask: Received invalid accounts parameter. Please report this bug.', accounts);
+            this._log.error('MadWallet: Received invalid accounts parameter. Please report this bug.', accounts);
             _accounts = [];
         }
         for (const account of accounts) {
             if (typeof account !== 'string') {
-                this._log.error('MetaMask: Received non-string account. Please report this bug.', accounts);
+                this._log.error('MadWallet: Received non-string account. Please report this bug.', accounts);
                 _accounts = [];
                 break;
             }
@@ -255,7 +255,7 @@ class BaseProvider extends safe_event_emitter_1.default {
             // we should always have the correct accounts even before eth_accounts
             // returns
             if (isEthAccounts && this._state.accounts !== null) {
-                this._log.error(`MetaMask: 'eth_accounts' unexpectedly updated accounts. Please report this bug.`, _accounts);
+                this._log.error(`MadWallet: 'eth_accounts' unexpectedly updated accounts. Please report this bug.`, _accounts);
             }
             this._state.accounts = _accounts;
             // handle selectedAddress
@@ -282,7 +282,7 @@ class BaseProvider extends safe_event_emitter_1.default {
      */
     _handleUnlockStateChanged({ accounts, isUnlocked, } = {}) {
         if (typeof isUnlocked !== 'boolean') {
-            this._log.error('MetaMask: Received invalid isUnlocked parameter. Please report this bug.');
+            this._log.error('MadWallet: Received invalid isUnlocked parameter. Please report this bug.');
             return;
         }
         if (isUnlocked !== this._state.isUnlocked) {

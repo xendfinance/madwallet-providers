@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=14.0.0"
   },
   "publishConfig": {
     "access": "public",
@@ -22,21 +22,21 @@
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write",
     "prepublishOnly": "yarn build && yarn lint && yarn test"
   },
-  "author": "MetaMask",
+  "author": "MadWallet",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/providers.git"
+    "url": "https://github.com/xendfinance/madwallet-providers.git"
   },
   "keywords": [
-    "MetaMask",
+    "MadWallet",
     "Ethereum",
     "Provider"
   ],
   "bugs": {
-    "url": "https://github.com/MetaMask/providers/issues"
+    "url": "https://github.com/xendfinance/madwallet-providers/issues"
   },
-  "homepage": "https://github.com/MetaMask/providers#readme",
+  "homepage": "https://github.com/xendfinance/madwallet-providers#readme",
   "files": [
     "dist/"
   ],
@@ -50,7 +50,7 @@
     "fast-deep-equal": "^2.0.1",
     "is-stream": "^2.0.0",
     "json-rpc-engine": "^6.1.0",
-    "json-rpc-middleware-stream": "^3.0.0",
+    "json-rpc-middleware-stream": "^4.2.1",
     "pump": "^3.0.0",
     "webextension-polyfill-ts": "^0.25.0"
   },
